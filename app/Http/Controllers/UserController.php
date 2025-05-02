@@ -21,4 +21,10 @@ class UserController extends Controller
             return redirect('/product');
         }
     }
+
+    public function logout(Request $request)
+    {
+        $request->session()->forget('user');
+        return redirect('/login');
     }
+}
