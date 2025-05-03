@@ -61,6 +61,14 @@
                 .search-box{
                     width: 500px !important;
                 }
+                .cart-list{
+                    margin: 30px;
+                }
+                .cart-img{
+                    height: 100px;
+                    width: 100px;
+                }
+                
 
                 </style>
                     </html>

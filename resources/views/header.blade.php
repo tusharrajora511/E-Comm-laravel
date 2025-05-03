@@ -20,7 +20,7 @@ $total =ProductController::cartItem();
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Orders</a>
+            <a class="nav-link" href="/myorders">Orders</a>
           </li>
         </ul>
   
@@ -30,17 +30,17 @@ $total =ProductController::cartItem();
         </form>
   
         <ul class="navbar-nav mb-2 mb-lg-0">
+        @if(Session::has('user'))
           <li class="nav-item">
-            <a class="nav-link" href="#">Cart({{$total}})</a>
+            <a class="nav-link" href="/cartlist">Cart({{$total}})</a>
           </li>
+          @endif
           @if(Session::has('user'))
           <li class="nav-item dropdown">
   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 {{Session::get('user')['name']}}  </a>
   <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="/logout">Logout</a></li>
-    <li><a class="dropdown-item" href="#">Page 1-2</a></li>
-    <li><a class="dropdown-item" href="#">Page 1-3</a></li>
   </ul>
 </li>
 @else
